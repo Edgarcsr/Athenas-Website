@@ -1,6 +1,6 @@
 const sr = ScrollReveal({
     distance: '40px',
-    duration: 2500,
+    duration: 1500,
     reset: true,
   });
   
@@ -8,7 +8,16 @@ const sr = ScrollReveal({
 //   sr.reveal('.header-buttons', { delay: 200, origin: 'top' });
   sr.reveal('#imagem-home', { delay: 200, origin: 'right' });
   sr.reveal('.home-text', { delay: 200, origin: 'left' });
-  sr.reveal('.stat-box', { delay: 300, origin: 'top' });
+  sr.reveal('.stats-section', { delay: 100, origin: 'top' });
+  sr.reveal('.about-me', { delay: 100, origin: 'top' });
+  sr.reveal('.imagemSobreMim', { delay: 100, origin: 'left' });
+  sr.reveal('.TextoSobreMim', { delay: 100, origin: 'right' });
+  sr.reveal('.video-plans', { delay: 100, origin: 'top' });
+  sr.reveal('.plans', { delay: 100, origin: 'bottom' });
+  sr.reveal('.produto', { delay: 100, origin: 'left' });
+
+
+
     
   // Contadores
   const counters = document.querySelectorAll('.counter');
@@ -73,7 +82,7 @@ const sr = ScrollReveal({
   // Iniciar a animação
   typeWriter();
   
-  //Planos
+
 //Planos
 document.addEventListener('DOMContentLoaded', () => {
   const basicPlan = document.getElementById('basicPlan');

@@ -1,41 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
     const botaoMenu = document.querySelector('.btnHeaderMenu');
+    const iconMenu = document.querySelector('.iconMenu');
     const menuSuspenso = document.getElementById('menuSuspenso');
-    const iconeMenu = botaoMenu.querySelector('.fa-bars'); // Ícone do menu
-    const iconeX = botaoMenu.querySelector('.fa-times'); // Ícone "X"
 
-    botaoMenu.addEventListener('click', function(event) {
-        event.preventDefault(); // Impede a rolagem para o topo
-        
-        // Controla a exibição do menu
-        if (menuSuspenso.style.maxHeight === '0px' || menuSuspenso.style.maxHeight === '') {
-            menuSuspenso.style.maxHeight = '300px'; // Ajuste conforme necessário para acomodar o conteúdo do menu
-            menuSuspenso.style.opacity = '1';
-            iconeMenu.style.display = 'none'; // Esconde o ícone do menu
-            iconeX.style.display = 'inline-block'; // Mostra o ícone "X"
-        } else {
-            menuSuspenso.style.maxHeight = '0px';
-            menuSuspenso.style.opacity = '0';
-            iconeMenu.style.display = 'inline-block'; // Mostra o ícone do menu
-            iconeX.style.display = 'none'; // Esconde o ícone "X"
-        }
+    botaoMenu.addEventListener('click', function(e) {
+        e.stopPropagation(); // Impede que o evento de clique se propague
+        iconMenu.classList.toggle('opened');
+        iconMenu.setAttribute('aria-expanded', iconMenu.classList.contains('opened'));
+
+        // Controla a exibição do menu suspenso
+        const isMenuOpened = iconMenu.classList.contains('opened');
+        menuSuspenso.style.maxHeight = isMenuOpened ? '300px' : '0px';
+        menuSuspenso.style.opacity = isMenuOpened ? '1' : '0';
     });
 
-    document.addEventListener('click', function(event) {
-        let targetElement = event.target; // Obtém o elemento clicado
-
-        do {
-            if (targetElement == menuSuspenso || targetElement == botaoMenu) {
-                // Clica dentro do menu ou no botão, não faz nada
-                return;
-            }
-            targetElement = targetElement.parentNode;
-        } while (targetElement);
-
-        // Clicou fora do menu e do botão, fecha o menu
-        menuSuspenso.style.maxHeight = '0px';
-        menuSuspenso.style.opacity = '0';
-        iconeMenu.style.display = 'inline-block'; // Mostra o ícone do menu
-        iconeX.style.display = 'none'; // Esconde o ícone "X"
+    // Função para fechar o menu quando clicar fora
+    document.addEventListener('click', function(e) {
+        if (!botaoMenu.contains(e.target) && iconMenu.classList.contains('opened')) {
+            iconMenu.classList.remove('opened');
+            iconMenu.setAttribute('aria-expanded', 'false');
+            menuSuspenso.style.maxHeight = '0px';
+            menuSuspenso.style.opacity = '0';
+        }
     });
 });

@@ -24,22 +24,25 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         </div>
         <div class="header-buttons">
 <!-- Botão de Contato -->
-<a href="#" class="btnHeaderContact"><span class="contact-icon">&#9679;</span> Contato</a>
+<a href="https://wa.me/5511944526097?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btnHeaderContact" target="_blank"><span class="contact-icon">&#9679;</span> Contato</a>
 
-<!-- Botão de Menu -->
-<!-- Botão de Menu -->
 <!-- Botão de Menu com ambos ícones -->
-<a href="#" class="btnHeaderMenu">
-    <i class="fa-solid fa-bars"></i> <!-- Ícone do menu -->
-    <i class="fa-solid fa-times" style="display: none;"></i> <!-- Ícone "X" -->
+<a href="#" class="btnHeaderMenu" >
+    <div class="iconMenu">
+    <svg viewBox="0 0 100 100">
+        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+        <path class="line line2" d="M 20,50 H 80" />
+        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+    </svg>
+</div>
     Menu
 </a>
 <!-- Menu Suspenso -->
 <div class="menu-suspenso" id="menuSuspenso">
-    <a href="#">Inicio</a>
+    <a href="#home">Inicio</a>
     <a href="#about-me">Sobre Mim</a>
     <a href="#video-plans">Planos de Vídeo</a>
-    <a href="#produtos-section">Produtos</a>
+    <a href="#produtos">Produtos</a>
     <a href="#">Contato</a>
 </div>
 
@@ -47,15 +50,15 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         <div class="circle"></div>
 
     </header>
-    <section class="home">
+    <section class="home" id="home">
         <div class="home-text">
             <h1>Orquestrando Sonhos, da Inspiração à Realidade.</h1>
             <p>Assim como Athena guiava os heróis em suas jornadas, buscamos trazer clareza, precisão e beleza às suas narrativas visuais. Permita-nos transformar suas ideias em realidade com a arte da edição de vídeo.</p>
-        <div class="main-btn">
-            <a  href="#video-plans" class="btnMain">
+        <div class="buttons-home">
+            <a  href="#video-plans" class="home-btn">
                 <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>Explorar
              </a>            
-             <a href="#" class="btnMain two"><i class="fa-solid fa-caret-right"></i>Contrate Agora</a>
+             <a href="https://wa.me/5511944526097?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" class="home-btn two"><i class="fa-solid fa-caret-right"></i>Contrate Agora</a>
             </div>
         </div>
             <div id="imagem-home"></div>
@@ -72,7 +75,7 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
             <div class="stat-box">
                 <span class="icon-circle pink"><i class="fas fa-video"></i></span>
                 <div class="stat-text">
-                    <strong class="counter" data-target="300">0</strong>
+                    <strong class="counter" data-target="400">0</strong>
                     <p>Vídeos Feitos</p>
                 </div>
             </div>
@@ -86,9 +89,9 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
             </div>
         </section>
         
-        <section class="about-me">
+        <section class="about-me" id="about-me">
             <div class="sobre-mim-container">
-                <img src="Images/5E485gd.jpeg" onerror="this.onerror=null; this.src='https://imgur.com/5E485gd.png'" alt="Edgar C. S. Ribeiro" class="imagemSobreMim">
+                <img src="images/IMG_20240101_183216.jpg" onerror="this.onerror=null; this.src='https://imgur.com/5E485gd.png'" alt="Edgar C. S. Ribeiro" class="imagemSobreMim">
                 <div class="TextoSobreMim">
                 <div class="TextoSobreMimIntro">
                     <p>Olá Mundo!</p>
@@ -99,26 +102,23 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
                     <p>Encontrei na edição de vídeo a junção de paixão e profissão, transformando visões em histórias visuais vibrantes. Meu propósito é levar cada espectador a uma jornada imaginativa, onde cada corte e transição não apenas conta, mas conecta e encanta.</p>
                  </div>
                  <div class="social-media-icons">
-                    <a href="#" class="icon" data-tooltip="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
                     <a href="#" class="icon" data-tooltip="Twitter">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#" class="icon" data-tooltip="Instagram">
+                    <a href="https://www.instagram.com/edgarcsribeiro/" class="icon" data-tooltip="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="icon" data-tooltip="LinkedIn">
+                    <a href="https://www.linkedin.com/in/edgar-camacho-seabra-ribeiro-8a615825b/" class="icon" data-tooltip="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="#" class="icon" data-tooltip="GitHub">
+                    <a href="https://github.com/Edgarcsr" class="icon" data-tooltip="GitHub">
                         <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="icon" data-tooltip="Steam">
-                        <i class="fab fa-steam"></i>
                     </a>
                     <a href="#" class="icon" data-tooltip="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="icon" data-tooltip="Currículo">
+                        <i class="fa-regular fa-file-lines"></i>
                     </a>
                 </div>
                 </div>
@@ -152,7 +152,7 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
                     <p>6 meses de acompanhamento contínuo na criação de conteúdo.</p>
                     <div class="brinde">
                         <span>+ BRINDE</span>
-                        <span class="tooltip-icon" data-tooltip="Ao escolher esse plano, você ganhará Intro e Lowerthirds de Brinde!">
+                        <span class="tooltip-icon" data-tooltip="Ao escolher esse plano, você ganhará Intro, Lowerthirds e Capa de Brinde!">
                             <i class="fa-solid fa-circle-info"></i>
                         </span>
                     </div>                                
@@ -184,7 +184,7 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
             </div>
           </section>
 
-          <section class="produtos-section">
+          <section class="produtos-section" id="produtos">
             <!-- Produto Intro -->
             <div class="produto product-purple">
                 <h2>Intro</h2>
@@ -192,7 +192,7 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
               <div class="produto-descricao">
                 <p>Uma introdução impactante é crucial para captar a atenção do seu público desde o primeiro momento. Nossa Intro é projetada para criar uma primeira impressão memorável, estabelecendo o tom para o restante da sua apresentação ou vídeo.</p>
                 <div class="produto-preco">
-                <p class="numeroPreco">R$199,99</p>
+                <p class="numeroPreco">R$129,99</p>
                 <p>/por intro</p>
             </div>
                 <a href="#" class="btnProduto product-purple"><i class="fa-solid fa-bag-shopping"></i> Comprar Agora</a>
@@ -215,7 +215,7 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
                         <a href="#" class="btnProduto"><i class="fa-solid fa-bag-shopping"></i> Comprar Agora</a>
                     </div>
                     <div class="produto-video">
-                        <img src="images/20240317202430910.png" alt="Placeholder para vídeo curto" style="width: 100%; height: auto; border-radius: 10px;" onerror="this.onerror=null; this.src='https://i.imgur.com/Xw6KSKp.png';">
+                        <img src="images/macos-monterey-stock-pink-light-layers-5k-8k-7680x7680-5892.jpg" alt="Placeholder para vídeo curto" style="width: 100%; height: auto; border-radius: 10px;" onerror="this.onerror=null; this.src='https://i.imgur.com/Xw6KSKp.png';">
                     </div>
                 </div>
             </div>
@@ -230,35 +230,31 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
           </footer>
           
           
-
-
         <script src="https://unpkg.com/scrollreveal"></script>
         <script src="script.js"></script>
         <script src="menu.js"></script>
         <script>
-            // Quando o documento estiver pronto
-            document.addEventListener("DOMContentLoaded", function() {
-              // Seleciona todos os links com hashes
-              document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                  // Previne o comportamento padrão do link
-                  e.preventDefault();
-          
-                  // Encontra o elemento para o qual rolar
-                  const targetId = this.getAttribute('href');
-                  const targetElement = document.querySelector(targetId);
-          
-                  // Verifica se o elemento existe para evitar erros
-                  if (targetElement) {
-                    // Usa scrollIntoView para rolar até o elemento
-                    targetElement.scrollIntoView({
-                      behavior: 'smooth',
-                      block: 'start'
-                    });
-                  }
-                });
-              });
-            });
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        const headerOffset = 110; // A altura do cabeçalho
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+});
+
           </script>
           
 </body>
